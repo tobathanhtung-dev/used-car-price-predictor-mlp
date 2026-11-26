@@ -4,9 +4,7 @@ A web application for predicting used car prices in the Indian market using a Mu
 
 The application was developed with Python and Streamlit and allows users to enter vehicle characteristics and obtain an estimated price.
 
-## Live Demo
-
-[Try the application here](https://used-car-price-predictor-mlp.streamlit.app/)
+**Live demo:** [Try the application here](https://used-car-price-predictor-mlp.streamlit.app/)
 
 ## Project Overview
 
