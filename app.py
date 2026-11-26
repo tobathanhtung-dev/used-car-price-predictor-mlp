@@ -7,8 +7,6 @@ import pandas as pd
 preprocessador = joblib.load("preprocessador.pkl")
 mlp_reg = joblib.load("mlp_regressor.pkl")
 
-preprocessador, mlp_reg = load_models()
-
 # Extract categorical options from the fitted OneHotEncoder
 categorias = preprocessador.named_transformers_["cat"].categories_
 
