@@ -4,12 +4,8 @@ import joblib
 import pandas as pd
 
 # Load trained model and preprocessing pipeline
-@st.cache_resource
-def load_models():
-    preprocessador = joblib.load("preprocessador.pkl")
-    mlp_reg = joblib.load("mlp_regressor.pkl")
-
-    return preprocessador, mlp_reg
+preprocessador = joblib.load("preprocessador.pkl")
+mlp_reg = joblib.load("mlp_regressor.pkl")
 
 preprocessador, mlp_reg = load_models()
 
