@@ -4,8 +4,14 @@ import joblib
 import pandas as pd
 
 # Load trained model and preprocessing pipeline
-preprocessador = joblib.load("preprocessador.pkl")
-mlp_reg = joblib.load("mlp_regressor.pkl")
+@st.cache_resource
+def load_models():
+    preprocessador = joblib.load("preprocessador.pkl")
+    mlp_reg = joblib.load("mlp_regressor.pkl")
+
+    return preprocessador, mlp_reg
+
+preprocessador, mlp_reg = load_models()
 
 # Extract categorical options from the fitted OneHotEncoder
 categorias = preprocessador.named_transformers_["cat"].categories_
